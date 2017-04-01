@@ -50,14 +50,17 @@
         color: cadetblue;
       }
       #bottom2{
+          line-height: 80px;
         text-align: center;
-        margin-top: 560px;
+        margin-top: 460px;
         color: black;
       }
       h4{
         color: red;
       }
       span{text-indent: 3em;}
+        image{
+        }
     </style>
     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
     <script type="text/javascript">
@@ -82,6 +85,7 @@
       <%List<String> list = (List<String>) request.getAttribute("list");
         if(list!=null && list.size()>0){
         String str[] = new String[list.size()];
+
 
             for(int i=0;i<list.size();i++){
               if(list.get(i).startsWith("访问被限制")) {
@@ -108,12 +112,12 @@
               <h4>城市简介</h4>
               <span><%=str[22]%></span><br/>
     <div id="bottom">
-      &copy;&nbsp;copyright lzf link http://www.webxml.com.cn &nbsp;2017.3.31<br/><br/><br/>
+        <img src="image/QrCodeImg.png" width="80" height="80" alt="二维码">&nbsp; &copy;&nbsp;copyright lzf link http://www.webxml.com.cn &nbsp;2017.3.31<br/><br/><br/>
     </div>
   </div>
         <%  }else{%>
   <div id="bottom2">
-    &copy;&nbsp;copyright lzf link http://www.webxml.com.cn &nbsp;2017.3.31<br/><br/><br/>
+      <img src="image/QrCodeImg.png" alt="二维码" width="80" height="80">&nbsp; &copy;&nbsp;copyright lzf link http://www.webxml.com.cn &nbsp;2017.3.31<br/><br/><br/>
   </div>
   <%}%>
   <script type="text/javascript">
