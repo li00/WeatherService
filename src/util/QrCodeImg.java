@@ -67,8 +67,4 @@ public class QrCodeImg extends HttpServlet {
         File imgFile = new File(PATH);
         ImageIO.write(bufferedImage, "png", imgFile);
     }
-
-    public static void main(String[] args) throws IOException {
-        QrCodeImg.getQrCodeImg();
-    }
 }
